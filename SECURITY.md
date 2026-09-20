@@ -34,7 +34,7 @@ You do not need a proof-of-concept exploit. A clear description of the flaw is e
 
 | | |
 |---|---|
-| Acknowledge your report | Within **3 business days** |
+| Acknowledge your report | Within **1 business day** |
 | Tell you whether we can reproduce it, and our initial severity | Within **10 business days** |
 | Ship a fix for a critical issue | Target **14 days** from confirmation |
 | Ship a fix for a high-severity issue | Target **30 days** from confirmation |
