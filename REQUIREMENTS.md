@@ -59,9 +59,10 @@ RoundTrips-<version>-setup.exe /VERYSILENT /NORESTART /CURRENTUSER
 ```
 
 Add `/ALLUSERS` (elevated) for a machine-wide install and `/LOG=<path>` for an install log. A
-portable zip of the same application is published beside it. Every release is published with its
-SHA-256 digests and a CycloneDX software bill of materials; verify the download against the digest
-before installing. Updates are never automatic: the application only checks when asked, and opens
+portable zip of the same application is published beside it. From `2026.1003.2` the installer and
+every application file are code-signed by RoundTrips LTD and malware-scanned by the certificate
+authority before signing. Every release is published with its SHA-256 digests and a CycloneDX
+software bill of materials; verify the download against the digest before installing. Updates are never automatic: the application only checks when asked, and opens
 the release page in the browser rather than downloading anything itself.
 
 The detailed IT chapter — where data lives, credentials, logging and the audit trail, licensing —
