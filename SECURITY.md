@@ -1,7 +1,7 @@
 <!--
   admin@roundtrips.io is the one address in this repository that a stranger is expected to find
   and use, so it has to stay a monitored mailbox rather than a person who may be on site. The same
-  address is in legal/PrivacyPolicy.md §12 and docs/SECURITY-WHITEPAPER.md §9 — change all three
+  address is in legal/PrivacyPolicy.md §15 and docs/SECURITY-WHITEPAPER.md §9 — change all three
   in the same commit. This file is also published verbatim in the public releases repository so a
   reporter can reach it without access to the source; keep the two copies identical.
 -->
@@ -82,5 +82,10 @@ Stated up front so nobody spends their time confirming them.
 - **Local application data is not encrypted at rest.** Tokens go to Windows Credential Manager, but
   the task database, run logs and downloaded models are ordinary files protected by Windows file
   permissions. RoundTrips expects to run on a machine with full-disk encryption enabled.
+- **A new release can still meet a Windows SmartScreen prompt.** Releases from `2026.1003.2` are
+  Authenticode-signed by RoundTrips LTD and malware-scanned by the certificate authority before
+  signing. The prompt names us as the publisher and fades as the certificate gathers download
+  reputation; it is not a sign the file was altered. A signature that does *not* verify would be,
+  and is worth reporting.
 - **The Client ID is public.** RoundTrips is an OAuth public client using PKCE and has no client
   secret. A committed Client ID is not a leaked credential.
