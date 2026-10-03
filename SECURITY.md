@@ -34,10 +34,10 @@ You do not need a proof-of-concept exploit. A clear description of the flaw is e
 
 | | |
 |---|---|
-| Acknowledge your report | Within **1 business day** |
-| Tell you whether we can reproduce it, and our initial severity | Within **10 business days** |
-| Ship a fix for a critical issue | Target **14 days** from confirmation |
-| Ship a fix for a high-severity issue | Target **30 days** from confirmation |
+| Acknowledge your report | Within **4 hours** |
+| Tell you whether we can reproduce it, and our initial severity | Within **1 business day** |
+| Ship a fix for a critical issue | Target **1 day** from confirmation |
+| Ship a fix for a high-severity issue | Target **3 days** from confirmation |
 | Tell you it is released, and credit you if you want it | On the day |
 
 If we disagree that something is a vulnerability we will say so plainly and explain why, rather
