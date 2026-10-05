@@ -8,9 +8,9 @@ with the product; the version it describes is the current release on this reposi
 
 | | Required? | Detail |
 |---|---|---|
-| **Windows 10 or 11, 64-bit** | Yes | There is no 32-bit build and no macOS or Linux build. |
+| **Windows 11, or Windows 10 Enterprise LTSC or IoT, 64-bit** | Yes | The runtime, .NET 10, supports no other Windows 10 edition: Home and Pro left Microsoft support in October 2025. There is no 32-bit build and no macOS or Linux build. |
 | **Autodesk Navisworks Manage**, 2020 or newer | For building models | RoundTrips drives Navisworks' own `FiletoolsTaskRunner.exe`, which ships only with **Manage**. Simulate and Freedom do not include it. Navisworks is licensed Autodesk software and is not bundled; it must be installed and signed in on the same computer at least once. Everything except federating, cleaning and importing works without it: browsing, filtering, downloading, uploading, file syncs and transmittals. |
-| **.NET runtime** | No | The build is self-contained; the .NET 9 runtime ships inside the application folder. Nothing is installed system-wide. |
+| **.NET runtime** | No | The build is self-contained; the .NET 10 runtime ships inside the application folder. Nothing is installed system-wide. |
 | **Administrator rights** | No | Installs per user by default, into the user's own profile. A machine-wide install into Program Files is offered, not required. |
 | **Disk** | About 150 MB for the program | Working data is bounded by settings: a download cache of up to 50 GB and run folders of up to 50 GB by default, both adjustable and both relocatable to a drive with room. Federated models are large; plan for the models, not the program. |
 | **Memory and CPU** | What Navisworks needs | Federating is Navisworks' work. A machine that federates the same models by hand in Navisworks will federate them with RoundTrips. Up to six runs execute at once by default; lower it on a smaller machine. |
@@ -40,7 +40,7 @@ is configured with, including a PAC script. There is no inbound listener except 
 | `www.dropbox.com`, `api.dropboxapi.com`, `content.dropboxapi.com` | Dropbox sign-in and files | Only for Dropbox tasks |
 | `api.keygen.sh` | Licence activation and a daily validation | For licensing; five days of offline grace |
 | `roundtrips.io` | One call on first launch to start the trial | Once per computer |
-| `api.github.com`, `github.com` | The update check, only when a user presses the button, and the release page it opens | Optional |
+| `api.github.com`, `github.com` | The update check, after startup and every six hours unless switched off, and the release page it opens | Optional |
 | `live.roundtrips.io` | RoundTrips Live, the optional status feed | Only if switched on |
 
 **Sign-in callback.** During sign-in the application listens on the loopback address only, on port
